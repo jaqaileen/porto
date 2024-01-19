@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://use.typekit.net/ztd7gxp.css">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+
+  <!-- SINGLE PAGE -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="./turn.min.js"></script>
+  <style type="text/css">
+    #magazine{
+      width: 380px;
+      height: 550px;
+    }
+    #magazine .turn-page{
+      background-color:#e18ab1;
+      background-size:100% 100%;
+    }
+  </style>
+</head>
+
+<body class="md:p-16 p-8">
+  <nav class="flex justify-between">
+    <div>
+      <a href="../cover/index.html">
+        <img src="../assets/about/logo.png" alt="Logo" class="w-32">
+      </a>
+    </div>
+    <div class="flex gap-8">
+      <a href="#bottom-of-page" class="custom-hover-color hover:scale-125">Projects</a>
+      <a href="../contact/index.html" class="custom-hover-color hover:scale-125">Contact</a>
+    </div>
+  </nav>
+
+
+
+  <div class="h-screen flex items-center justify-center -mt-32">
+    <div>
+      <h2 class="font-bold text-5xl md:text-7xl">Hi, my name is Jaq Aileen</h2>
+      <br>
+      <h3 id="professionHeader" class="text-3xl md:text-4xl font-bold">I am a <em>graphic</em>> designer</h3>
+    </div>
+  </div>
+
+  <div class="-mt-32">
+    <div class="grid place-items-start z-0">
+      <svg id="rotatingText" viewBox="0 0 200 200" width="230" height="230">
+        <defs>
+          <path id="circle" d="M 100, 100
+                  m -75, 0
+                  a 75, 75 0 1, 0 150, 0
+                  a 75, 75 0 1, 0 -150, 0
+                  ">
+          </path>
+        </defs>
+        <text width="400">
+          <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+            Projects Projects Projects
+          </textPath>
+        </text>
+      </svg>
+      <div class="z-10 -mt-28 pl-24 animate-bounce">
+        <svg id="main-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="65" viewBox="0 0 64 171" fill="none" class="">
+          <path d="M32 2V169C32 151.495 38.5 119.635 62 113.333" stroke="#2E3A99" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M32 2V169C32 151.495 25.5 119.635 2 113.333" stroke="#2E3A99" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="my-32">
+    <div class="marquee-text text-4xl md:text-7xl"> 👋 nice to meet you! 💌</div>
+  </div> -->
+
+  <div class="py-16">
+    <div class="marquee">
+      <div class="marquee__inner">
+        <p class="marquee__line text-center text-3xl lg:text-6xl">👋 nice to meet you! 💌</p>
+        <p class="marquee__line text-center text-3xl lg:text-6xl">👋 nice to meet you! 💌</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="bottom-of-page">
+    <div class="not-full-height-container max-[640px]:hidden">
+      <div class="book-wrapper" id="cover">
+        <div class="book-container">
+          <div class="book-front side"></div>
+          <div class="book-left side">
+            <span class="cover"></span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="book max-[640px]:hidden" id="book" style="display: none; visibility: hidden;">
+        <div id="pages" class="pages">
+          <div class="page">
+            <img src="../assets/pages/pages.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages2.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages3.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages4.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages5.jpg" />
+          </div>
+          <div class="page">
+            <video id="video1" src="../gif/splash1.mp4" muted playsinline style="width: 100%; height: auto;"></video>
+          </div>
+          <div class="page">
+            <video id="video2" src="../gif/splash2.mp4" muted playsinline style="width: 100%; height: auto;"></video>
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages8.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages9.jpg" />
+          </div>
+          <div class="page">
+            <video id="video3" src="../gif/aquation.mp4" muted playsinline style="width: 100%; height: auto;"></video>
+          </div>
+          <div class="page">
+            <video id="video4" src="../gif/manual.mp4" muted playsinline style="width: 100%; height: auto;"></video>
+          </div>
+          <div class="page">
+            <video id="video5" src="../gif/cyborg.mp4" muted playsinline style="width: 100%; height: auto;"></video>
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages13.jpg" />
+          </div>
+          <div class="page">
+            <video id="video6" src="../assets/wwjd/pages14.mp4" muted playsinline style="width: 100%; height: auto;"></video>
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages15.jpg" />
+          </div>
+          <div class="page">
+            <video id="video7" src="../gif/LL.mp4" muted playsinline style="width: 100%; height: auto;"></video>
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages17.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages18.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages19.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages20.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages21.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages22.jpg" />
+          </div>
+          <div class="page">
+            <img src="../assets/pages/pages23.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="magazine" class="min-[640px]:hidden">
+      <div style="background-image:url(../assets/pages/pages.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages2.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages3.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages4.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages5.jpg);"></div>
+      <div style="background-image:url(../assets/splash/splashgif/gif-splash-1.gif);"></div>
+      <div style="background-image:url(../assets/splash/splashgif/gif-splash-2.gif);"></div>
+      <div style="background-image:url(../assets/pages/pages8.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages9.jpg);"></div>
+      <div style="background-image:url(../gif/aquation.mp4);"></div>
+      <div style="background-image:url(../gif/manual.mp4);"></div>
+      <div style="background-image:url(../gif/cyborg.mp4);"></div>
+      <div style="background-image:url(../assets/pages/pages13.jpg);"></div>
+      <div style="background-image:url(../assets/wwjd/pages14.mp4);"></div>
+      <div style="background-image:url(../assets/pages/pages15.jpg);"></div>
+      <div style="background-image:url(../gif/LL.mp4);"></div>
+      <div style="background-image:url(../assets/pages/pages17.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages18.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages19.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages20.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages21.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages22.jpg);"></div>
+      <div style="background-image:url(../assets/pages/pages23.jpg);"></div>
+    </div>
+  </div>
+
+<footer>
+  <h1>Designed and coded by Jaq Aileen</h1>
+</footer>
+
+</div>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   -->
+  <script src="./script.js"></script>
+
+
+  <!-- SINGLE PAGE MEGAZINE -->
+  <script type="text/javascript">
+
+    $(window).ready(function() {
+      $('#magazine').turn({
+                display: 'single',
+                acceleration: true,
+                gradients: !$.isTouch,
+                elevation:50,
+                when: {
+                  turned: function(e, page) {
+                    /*console.log('Current view: ', $(this).turn('view'));*/
+                  }
+                }
+              });
+    });
+
+
+    $(window).bind('keydown', function(e){
+
+      if (e.keyCode==37)
+        $('#magazine').turn('previous');
+      else if (e.keyCode==39)
+        $('#magazine').turn('next');
+
+    });
+
+    $(window).load(function() {
+    $('.preload').attr('src', function(i,a){
+        $(this).attr('src','').removeClass('preload').attr('src',a);
+    });
+    });
+  </script>
+</body>
+
+</html>
+

@@ -1,0 +1,470 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "p22-mackinac-pro", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f2f2f0; 
+} 
+
+/* .page-container {
+  padding-top: 5%; 
+    padding-bottom: 2%; 
+    padding-left: 10%; 
+    padding-right: 10%;
+} */
+/* 
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  text-align: center;
+  
+}
+
+header img {
+  width: 12%;
+  height: 12%;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.spacer {
+  flex: 1;
+} */
+
+/* .full-height-container {
+  height: 78vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.not-full-height-container {
+  height: 65vh; 
+  display: flex;
+}
+
+/* .container {
+  padding: 20px; 
+  box-sizing: border-box;
+} */
+
+h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #2e3a99;
+  font-size: 4em;
+}
+
+h3 {
+  text-align: center;
+  color: #2e3a99;
+  font-weight: 500;
+  font-size: 3em;
+}
+
+h3 em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* @media screen and (max-width: 700px) {
+  h1{
+    font-size: 2em;
+  }
+  h2 {
+      font-size: 3em;
+  }
+  h3 {
+      font-size: 2em; 
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1{
+    font-size: 1em;
+  }
+  h2 {
+      font-size: 2em;
+  }
+  h3 {
+      font-size: 1em; 
+  }
+} */
+/* 
+header span {
+  margin: 0 20px;
+} */
+
+/* .marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding-top: 23%;
+  padding-bottom: 10%;
+}
+
+.marquee-text {
+  font-weight: 100;
+  font-family: p22-mackinac-pro, sans-serif;
+  color: #2e3a99;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+} */
+
+.marquee {
+  overflow: hidden;
+  font-weight: 300;
+  color: #2e3a99;
+}
+
+.marquee__inner {
+  display: flex;
+}
+
+.marquee__line {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 10px 15px;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+  
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.book-wrapper {
+  width: 395px;
+  height: 539px;
+  position: relative;
+}
+
+.book-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.book-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/pages/pages.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.book-left {
+  position: absolute;
+  width: 40px;
+  left: -20px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/pages/spine.png);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.1) 100%), url(../assets/pages/spine.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.book-front:before {
+  content: "";
+  width: 3px;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.side {
+  position: absolute;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.side .cover {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 35%;
+}
+
+/* ----------------- */
+
+.book {
+  transition: opacity 0.4s 0.2s;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: calc(50%);
+  transform: translate(-50%, 8%);
+}
+
+.page {
+  width: 395px;
+  height: 539px;
+  background-color: #111111;
+  float: left;
+  margin-bottom: 0.5em;
+  background: left top no-repeat;
+  background-size: cover;
+}
+
+.page:nth-child(even) {
+  clear: both;
+}
+
+.book {
+  perspective: 250vw;
+}
+
+.book .pages {
+  width: 790px;
+  height: 539px;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.book .page {
+  float: none;
+  clear: none;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 395px;
+  height: 539px;
+  transform-origin: 0 0;
+  transition: transform 1s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  user-select: none;
+  background-color: e18ab1;
+}
+
+.book .page:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.7s;
+  z-index: 2;
+}
+
+.book .page:nth-child(odd) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+  right: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .15) 0%, rgba(0, 0, 0, 0) 10%);
+}
+
+.book .page:nth-child(odd):hover {
+  transform: rotateY(-15deg);
+}
+
+.book .page:nth-child(odd):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.book .page:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0);
+}
+
+.book .page:nth-child(even) {
+  pointer-events: none;
+  transform: rotateY(180deg);
+  transform-origin: 100% 0;
+  left: 0;
+  border-color: black;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, .12) 0%, rgba(0, 0, 0, 0) 10%);
+}
+
+.book .page:nth-child(even):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.book .page.grabbing {
+  transition: none;
+}
+
+.flip-animation {
+  animation: flip 1s ease-in-out;
+}
+
+.book .page.flipped:nth-child(odd) {
+  pointer-events: none;
+  transform: rotateY(-180deg);
+}
+
+.book .page.flipped:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.book .page.flipped:nth-child(even) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+}
+
+.book .page.flipped:nth-child(even):hover {
+  transform: rotateY(15deg);
+}
+
+.book .page.flipped:nth-child(even):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.book .page.flipped:nth-child(even):before {
+  background: rgba(0, 0, 0, 0);
+}
+
+.page:nth-child(odd) {
+  background-position: right top;
+}
+
+.page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* //// */
+
+footer {
+  text-align: center;
+  padding: 12% 2% 4% 4%;
+}
+
+footer p {
+  font-size: 1em; 
+  margin: 0;
+}
+
+
+/* body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+} */
+
+.text {
+  font-weight: 500;
+  letter-spacing: 5px;
+  font-family: 'p22-mackinac-pro', sans-serif;
+  font-size: 1.7em;
+  fill: #e18ab1;
+}
+
+#rotatingText {
+  animation-name: rotate-circle;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+@keyframes rotate-circle {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.main {
+  position: relative;
+}
+
+#main-arrow {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 22;
+
+}
+
+/* svg {
+  position: absolute;
+  z-index: 20;
+  animation-direction: reverse;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* scroll-body {
+  scroll-snap-type: y proximity;
+  scroll-snap-align: start;
+} */
+
+a.scroll-to-bottom {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the default text color */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* custom-body {
+  margin: 0;
+  overflow: hidden;
+  cursor: none; 
+} */
+
+.custom-cursor {
+position: absolute;
+width: 50px; 
+height: 50px; 
+background: url('../assets/about/cursor.png') no-repeat;
+pointer-events: none;
+}
+
+.custom-hover-color:hover {
+  color: #e18ab1;
+}
