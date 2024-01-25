@@ -95,6 +95,7 @@ for (var i = 0; i < pages.length; i++) {
 document.addEventListener("DOMContentLoaded", function () {
   for (var i = 0; i < pages.length; i++) {
     pages[i].pageNum = i + 1;
+    console.log(pages[i].pageNum)
     pages[i].onclick = function () {
       console.log(this.pageNum);
       if (this.pageNum + 1 >= pages.length || this.pageNum === 2) {
@@ -132,9 +133,19 @@ document.addEventListener("DOMContentLoaded", function () {
       if (this.pageNum % 2 === 0) {
         this.classList.remove("flipped");
         this.previousElementSibling.classList.remove("flipped");
+        setTimeout(() => {           
+          document.getElementById('myAnimatedGIF1').src = document.getElementById('myAnimatedGIF1').src
+        }, 300);
+        document.getElementById('myAnimatedGIF2').src = document.getElementById('myAnimatedGIF2').src
+
       } else {
         this.classList.add("flipped");
         this.nextElementSibling.classList.add("flipped");
+
+        document.getElementById('myAnimatedGIF1').src = document.getElementById('myAnimatedGIF1').src
+        setTimeout(() => {
+          document.getElementById('myAnimatedGIF2').src = document.getElementById('myAnimatedGIF2').src
+        }, 300);
       }
     };
   }
@@ -146,8 +157,6 @@ const video2 = document.getElementById('video2');
 const video3 = document.getElementById('video3');
 const video4 = document.getElementById('video4');
 const video5 = document.getElementById('video5');
-const video6 = document.getElementById('video6');
-const video7 = document.getElementById('video7');
 const videos = document.querySelectorAll('video');
   
   videos.forEach(video => {
@@ -159,7 +168,7 @@ const videos = document.querySelectorAll('video');
 
 //scroll down
 document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll('a.hover:text-#e18ab1.hover:scale-125');
+  const links = document.querySelectorAll('a.scroll-to-bottom');
 
   links.forEach(link => {
       link.addEventListener('click', function (e) {
