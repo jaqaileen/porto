@@ -27,8 +27,8 @@
   </style>
 </head>
 
-<body class="p-8">
-  <nav class="flex justify-between">
+<body class="p-8" onscroll="parallaxScroll()">
+  <nav class="flex justify-between"> 
     <div>
       <a href="../cover/index.html">
         <img src="./assets/about/logo.png "alt= "Logo" class="w-32">
@@ -39,8 +39,6 @@
       <a href="contact/index.html" class="custom-hover-color hover:scale-125 md:text-[28pt] lg:text-[14pt]">Contact</a>
     </div>
   </nav>
-
-
 
   <div class="h-screen flex items-center justify-center -mt-32">
     <div>
@@ -213,7 +211,16 @@
    -->
   <script src="./script.js"></script>
 
+  <script>
+    function parallaxScroll() {
+      var scrolled = window.scrollY;
 
+      // Adjust the parallax effect based on the scroll position
+      document.getElementById('main-arrow').style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+      document.getElementById('rotatingText').style.transform = 'translateY(' + (scrolled * 0.2) + 'px)';
+    }
+  </script>
+  
   <!-- SINGLE PAGE MEGAZINE -->
   <script type="text/javascript">
 
