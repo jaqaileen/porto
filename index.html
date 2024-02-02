@@ -27,7 +27,7 @@
   </style>
 </head>
 
-<body class="p-8" onscroll="parallaxScroll()">
+<body class="p-8">
   <nav class="flex justify-between"> 
     <div>
       <a href="../cover/index.html">
@@ -211,16 +211,7 @@
    -->
   <script src="./script.js"></script>
 
-  <script>
-    function parallaxScroll() {
-      var scrolled = window.scrollY;
 
-      // Adjust the parallax effect based on the scroll position
-      document.getElementById('main-arrow').style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
-      document.getElementById('rotatingText').style.transform = 'translateY(' + (scrolled * 0.2) + 'px)';
-    }
-  </script>
-  
   <!-- SINGLE PAGE MEGAZINE -->
   <script type="text/javascript">
 
